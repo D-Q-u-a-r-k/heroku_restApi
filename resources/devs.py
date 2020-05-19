@@ -1,8 +1,9 @@
 from flask_restful import Resource
+from resources.json_rw import read
 
-class Devs(Resource):
+class DevsListAll(Resource):
     def get(self):
-        return {"devs": "working"}
+        return read()
 
     def post(self):
         pass
