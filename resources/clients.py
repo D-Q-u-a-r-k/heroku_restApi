@@ -10,7 +10,12 @@ def abort_if_client_doesnt_exist(client_id):
         abort(404, message="{} doesn't exist".format(client_id))
 
 parser = reqparse.RequestParser()
-parser.add_argument('task')
+parser.add_argument('full_name')
+parser.add_argument('email')
+parser.add_argument('phone')
+parser.add_argument('deadline')
+parser.add_argument('services')
+parser.add_argument('description')
 
 class ClientsQuery(Resource):
     def get(self, client_id):
@@ -22,6 +27,12 @@ class ClientsSubmit(Resource):
         args = parser.parse_args()
         client_id = int(max(CLIENTS.keys()).lstrip('client')) + 1
         client_id = 'client%i' % client_id
-        CLIENTS[client_id] = {'task': args['task']}
+        CLIENTS[client_id] = {'Full Name': args['full_name'],
+                                'Email': args['email'],
+                                'Phone': args['phone'],
+                                'Deadline': args['deadline'],
+                                'Services': args['services'],
+                                'Description': args['description']
+                                }
         write(CLIENTS) #update json
         return CLIENTS[client_id], 201
