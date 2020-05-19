@@ -7,7 +7,7 @@ CLIENTS = read()
 # Check client_id is present
 def abort_if_client_doesnt_exist(client_id):
     if client_id not in CLIENTS:
-        abort(404, message="Todo {} doesn't exist".format(client_id))
+        abort(404, message="{} doesn't exist".format(client_id))
 
 parser = reqparse.RequestParser()
 parser.add_argument('task')
