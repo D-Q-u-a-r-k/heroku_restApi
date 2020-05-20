@@ -1,1 +1,42 @@
-{"client1": {"task": "build an API"}, "client2": {"task": "?????"}, "client3": {"task": "profit!"}, "client4": {"task": "something new"}, "client5": {"task": "something new"}}
+{
+    "client1": {
+        "full_name": "None",
+        "email": "None",
+        "phone": "None",
+        "deadline": "None",
+        "services": "None",
+        "description": "None"
+    },
+    "client2": {
+        "Full Name": "Serena",
+        "Email": "hetherSalva@gmail.com",
+        "Phone": "1234567890",
+        "Deadline": "2",
+        "Services": "Coding",
+        "Description": "help is given to one who needs it."
+    },
+    "client3": {
+        "Full Name": "Serena",
+        "Email": "hetherSalva@gmail.com",
+        "Phone": "1234567890",
+        "Deadline": "2",
+        "Services": "Coding",
+        "Description": "help is given to one who needs it."
+    },
+    "client4": {
+        "Full Name": "Serena",
+        "Email": "hetherSalva@gmail.com",
+        "Phone": "1234567890",
+        "Deadline": "2",
+        "Services": "Coding",
+        "Description": "help is given to one who needs it."
+    },
+    "client5": {
+        "Full Name": "Serena",
+        "Email": "hetherSalva@gmail.com",
+        "Phone": "1234567890",
+        "Deadline": "2",
+        "Services": "Coding",
+        "Description": "help is given to one who needs it."
+    }
+}
