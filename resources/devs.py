@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from resources.json_rw import read
 
-class DevsListAll(Resource):
+class Devs(Resource):
     def get(self):
         return read()
 
