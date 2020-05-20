@@ -3,3 +3,4 @@ env
 __pycache__/
 resources/__pycache__/
 readme.txt
+processEval.txt
