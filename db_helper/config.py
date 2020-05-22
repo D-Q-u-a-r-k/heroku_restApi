@@ -1,5 +1,6 @@
+
 USER = "postgres"
-PASSWORD = "dquark"
+PASSWORD = "password"
 IP = "localhost"
 PORT = "5432"
 DB_NAME = "test"
