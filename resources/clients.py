@@ -1,5 +1,6 @@
 from flask_restful import reqparse, abort, Api, Resource
 from resources.json_rw import read, write
+from db_helper.insert_values import insert
 
 # Sample Data for Testing Only
 CLIENTS = read()
@@ -24,14 +25,10 @@ class Clients(Resource):
 
     def post(self):
             args = parser.parse_args()
-            client_id = int(max(CLIENTS.keys()).lstrip('client')) + 1
-            client_id = 'client%i' % client_id
-            CLIENTS[client_id] = {'Full Name': args['full_name'],
-                                    'Email': args['email'],
-                                    'Phone': args['phone'],
-                                    'Deadline': args['deadline'],
-                                    'Services': args['services'],
-                                    'Description': args['description']
-                                    }
-            write(CLIENTS) #update json
-            return CLIENTS[client_id], 201
+            insert(name = args['full_name'],
+                    email = args['email'],
+                    phone = args['phone'],
+                    deadline = args['deadline'],
+                    services = args['services'],
+                    description = args['description'])
+            return 201
